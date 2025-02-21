@@ -6,6 +6,17 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="navbar"></div>
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("navbar").innerHTML = data))
+        .catch((error) =>
+          console.error("Erreur lors du chargement de la navbar :", error)
+        );
+    </script>
+
     hello world
+    <a href="navbar.php">Voir la Navbar</a>
   </body>
 </html>
